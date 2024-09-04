@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/frontend_assets/assets'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -13,10 +14,10 @@ const Footer = () => {
             <div>
                 <p className='text-xl font-medium mb-5 '>Company</p>
                   <ul className='flex flex-col gap-1 text-gray-400'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Delivery</li>
-                    <li>Privacy Policy</li>
+                    <Link to={"/"}><li>Home</li></Link>
+                    <Link to={"/about"}><li>About</li></Link>
+                    <Link to={"/delivery"}><li>Delivery</li></Link>
+                    <Link to={"/delivery"}><li>Policy & Privacy</li></Link>
                   </ul>
             </div>
 
@@ -28,6 +29,10 @@ const Footer = () => {
                     <li>https://github.com/nautiyalsandeep19</li>
                 </ul>
             </div>
+        </div>
+        <div>
+          <hr />
+          <p className='text-center text-sm mb-4 mt-4'>Copyright 2025@CodewithSandeep.com -All right reserved</p>
         </div>
     </div>
   )
