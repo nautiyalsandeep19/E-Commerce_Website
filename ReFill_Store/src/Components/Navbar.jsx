@@ -6,7 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { ShopContext } from '../Context/ShopContext';
 const Navbar = () => {
-    const [visible , setVisible]=useState(false);
+    const [visible , setVisible]=useState(false);   
     const {setShowSearch , getCartCount}=useContext(ShopContext);
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className='flex items-center gap-6'>
         <p className='text-2xl' onClick={()=>setShowSearch(true)}>{<CiSearch/>}</p>
         <div className='group relative'>
-            <p className='text-2xl'>{<FaUserAlt/>}</p>
+            <Link to={'/login'}><p className='text-2xl'>{<FaUserAlt/>}</p></Link>
             <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
             <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                     <p className='cursor-pointer hover:text-black'>My Profile</p>

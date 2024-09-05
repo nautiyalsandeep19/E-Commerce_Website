@@ -45,7 +45,7 @@ const Cart = () => {
                 <p className='text-xs sm:text-lg font-medium'>{ProductData.name}</p>
                 <div className='flex items-center gap-5 mt-2'>
                   <p>{currency}{ProductData.price}</p>
-                  <p className='px-2 sm:px-3 sm:py-1 border bg-gray-100 font-semibold'>{item.size}</p>
+                  <p className='px-2 sm:px-3 sm:py-1 border bg-gray-100 font-base'>{item.size}</p>
                 </div>
                </div>
               <input onChange={(e)=>e.target.value==='' || e.target.value==='0' ? null : updateQuantity(item._id ,item.size,Number(e.target.value))} className='border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 m-auto ' type="number" min={1} defaultValue={item.quantity} />
